@@ -120,38 +120,38 @@ nav{
   text-transform:uppercase;color:var(--muted);margin-bottom:12px;
 }
 
-/* ── SERVICES ── */
-#services{background:var(--surface);border-top:1px solid var(--border);}
-.services-grid{
+/* ── CAPABILITIES ── */
+#capabilities{background:var(--surface);border-top:1px solid var(--border);}
+.capabilities-grid{
   display:grid;grid-template-columns:repeat(3,1fr);
   border-left:1px solid var(--border);
   margin:0 60px;
 }
-.service-card{
+.capability-card{
   padding:48px 40px;
   border-right:1px solid var(--border);
   border-bottom:1px solid var(--border);
   position:relative;
   transition:background .25s;
 }
-.service-card:hover{background:var(--card);}
-.service-icon{
+.capability-card:hover{background:var(--card);}
+.capability-icon{
   width:48px;height:48px;border-radius:12px;
   display:flex;align-items:center;justify-content:center;
   font-size:22px;margin-bottom:28px;
   background:color-mix(in oklab,var(--accent) 12%,transparent);
 }
-.service-card h3{
+.capability-card h3{
   font-size:19px;font-weight:500;margin-bottom:12px;letter-spacing:-.01em;
 }
-.service-card p{font-size:14px;line-height:1.65;color:var(--muted);margin-bottom:24px;}
-.service-tags{display:flex;flex-wrap:wrap;gap:6px;}
+.capability-card p{font-size:14px;line-height:1.65;color:var(--muted);margin-bottom:24px;}
+.capability-tags{display:flex;flex-wrap:wrap;gap:6px;}
 .stag{
   font-family:var(--m);font-size:9.5px;letter-spacing:.06em;
   padding:4px 10px;border-radius:4px;
   border:1px solid var(--border);color:var(--muted);
 }
-.service-card .s-num{position:absolute;top:24px;right:28px;}
+.capability-card .s-num{position:absolute;top:24px;right:28px;}
 
 /* ── PROJECTS ── */
 #work{padding:100px 0;}
@@ -170,10 +170,17 @@ nav{
 
 .proj-visual{
   background:var(--surface);
+  padding:36px;
   overflow:hidden;
   aspect-ratio:auto;
+  display:flex;align-items:center;justify-content:center;
 }
-.proj-visual svg{display:block;width:100%;height:100%;}
+.proj-visual svg{
+  display:block;
+  width:100%;height:auto;max-height:100%;
+  border-radius:14px;
+  box-shadow:0 18px 50px -12px rgba(28,26,23,.35), 0 0 0 1px rgba(28,26,23,.08);
+}
 
 .proj-info{
   background:var(--card);
@@ -270,7 +277,7 @@ footer{
   .nav-links a:not(:last-child){display:none;}
   .hero,.hero-meta,#contact{padding-left:24px;padding-right:24px;}
   .hero h1{font-size:clamp(44px,12vw,80px);}
-  .services-grid,.process-grid{grid-template-columns:1fr;margin:0 24px;}
+  .capabilities-grid,.process-grid{grid-template-columns:1fr;margin:0 24px;}
   .s-head,.project-wrap{padding:0 24px;}
   .proj-row,.proj-row.flip{grid-template-columns:1fr;}
   .proj-row .proj-visual{order:0 !important;aspect-ratio:4/3;}
@@ -288,7 +295,7 @@ footer{
 <nav>
   <div class="brand"><div class="brand-dot"></div>Mugesh K.</div>
   <div class="nav-links">
-    <a href="#services">Services</a>
+    <a href="#capabilities">Capabilities</a>
     <a href="#work">Work</a>
     <a href="#process">Process</a>
     <a href="#contact">Contact</a>
@@ -299,9 +306,9 @@ footer{
 <!-- HERO -->
 <div class="hero">
   <div class="hero-bg"></div>
-  <div class="hero-label">AI Engineer &amp; Full-Stack Builder · Bangalore, IN</div>
-  <h1>Building intelligent<br>software that <em>works</em><br>in the real world.</h1>
-  <p class="hero-sub">I design and ship mobile apps, web platforms, and AI/ML systems — end to end. From idea to production, with six years of deep learning experience behind every decision.</p>
+  <div class="hero-label">AI Engineer · Full-Stack · Bangalore, IN</div>
+  <h1>Building AI software<br>that <em>ships</em>.<br>Not demos, not slides.</h1>
+  <p class="hero-sub">Working software in production — mobile, web, and AI systems shipped end-to-end. Six years of deep learning behind every call.</p>
   <div class="hero-actions">
     <a href="#work" class="btn-primary">View Work</a>
     <a href="#contact" class="btn-ghost">Get in Touch</a>
@@ -310,15 +317,11 @@ footer{
     <div class="hero-stats">
       <div>
         <div class="stat-num">6+</div>
-        <div class="stat-label">Years of Experience</div>
+        <div class="stat-label">Years</div>
       </div>
       <div>
-        <div class="stat-num">3</div>
-        <div class="stat-label">Domains Covered</div>
-      </div>
-      <div>
-        <div class="stat-num">∞</div>
-        <div class="stat-label">Problems Solved</div>
+        <div class="stat-num">6</div>
+        <div class="stat-label">Disciplines</div>
       </div>
     </div>
     <div class="hero-loc">
@@ -328,92 +331,98 @@ footer{
   </div>
 </div>
 
-<!-- SERVICES -->
-<section id="services">
+<!-- CAPABILITIES -->
+<section id="capabilities">
   <div class="s-head">
     <div>
-      <div class="s-num">What I do</div>
-      <h2>Services &<br><em>Capabilities</em></h2>
+      <div class="s-num">Capabilities</div>
+      <h2>Things I<br><em>build</em></h2>
     </div>
     <p>End-to-end engineering across mobile, web, and AI — built to production standards, not just demos.</p>
   </div>
-  <div class="services-grid">
+  <div class="capabilities-grid">
 
-    <div class="service-card">
+    <div class="capability-card">
       <div class="s-num">01</div>
-      <div class="service-icon">📱</div>
+      <div class="capability-icon">📱</div>
       <h3>Mobile Apps</h3>
-      <p>Cross-platform iOS and Android apps with native performance. From complex data pipelines to real-time chat — built with React Native and integrated with scalable backends.</p>
-      <div class="service-tags">
+      <p>iOS and Android apps that feel native — React Native and Expo frontends, real-time data, secure auth, and the offline edge cases nobody likes to think about.</p>
+      <div class="capability-tags">
         <span class="stag">React Native</span>
+        <span class="stag">Expo</span>
         <span class="stag">iOS</span>
         <span class="stag">Android</span>
-        <span class="stag">REST / SSE</span>
+        <span class="stag">Real-time</span>
       </div>
     </div>
 
-    <div class="service-card">
+    <div class="capability-card">
       <div class="s-num">02</div>
-      <div class="service-icon">🌐</div>
+      <div class="capability-icon">🌐</div>
       <h3>Web Applications</h3>
-      <p>Full-stack web platforms built for scale. Fast frontends, reliable APIs, and cloud-native deployments on GCP or Azure — production-hardened with security headers and rate limiting.</p>
-      <div class="service-tags">
+      <p>Full-stack web platforms — Next.js frontends, FastAPI services, and the production-grade pieces (auth, rate limiting, observability) wired in from day one.</p>
+      <div class="capability-tags">
         <span class="stag">Next.js</span>
         <span class="stag">FastAPI</span>
+        <span class="stag">TypeScript</span>
+        <span class="stag">Tailwind</span>
+        <span class="stag">Postgres</span>
+      </div>
+    </div>
+
+    <div class="capability-card">
+      <div class="s-num">03</div>
+      <div class="capability-icon">🤖</div>
+      <h3>AI &amp; ML Systems</h3>
+      <p>LLM applications and deep learning systems that go beyond prototypes — trained, evaluated, deployed, and monitored, with real guardrails and audit trails.</p>
+      <div class="capability-tags">
+        <span class="stag">LLMs</span>
+        <span class="stag">RAG</span>
+        <span class="stag">OpenAI</span>
+        <span class="stag">HuggingFace</span>
+        <span class="stag">Fine-tuning</span>
+      </div>
+    </div>
+
+    <div class="capability-card">
+      <div class="s-num">04</div>
+      <div class="capability-icon">⚙️</div>
+      <h3>Agentic Pipelines</h3>
+      <p>Multi-step autonomous systems that reason, retrieve, and act — from document pipelines to decision-making agents, with auditable reasoning chains, not black boxes.</p>
+      <div class="capability-tags">
+        <span class="stag">LangGraph</span>
+        <span class="stag">MCP</span>
+        <span class="stag">Function Calling</span>
+        <span class="stag">Pydantic</span>
+        <span class="stag">Multi-agent</span>
+      </div>
+    </div>
+
+    <div class="capability-card">
+      <div class="s-num">05</div>
+      <div class="capability-icon">👁️</div>
+      <h3>Computer Vision</h3>
+      <p>Image classification, detection, OCR, and document intelligence — six years building and shipping vision models that hold up in production.</p>
+      <div class="capability-tags">
+        <span class="stag">PyTorch</span>
+        <span class="stag">YOLO</span>
+        <span class="stag">OCR</span>
+        <span class="stag">VLMs</span>
+        <span class="stag">Document AI</span>
+      </div>
+    </div>
+
+    <div class="capability-card">
+      <div class="s-num">06</div>
+      <div class="capability-icon">☁️</div>
+      <h3>Cloud &amp; Deployment</h3>
+      <p>Production-ready containerised deployments across AWS, GCP, and Azure. Docker, Kubernetes, secrets, and observability — the boring infrastructure handled so the app just runs.</p>
+      <div class="capability-tags">
+        <span class="stag">AWS</span>
         <span class="stag">GCP</span>
         <span class="stag">Azure</span>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="s-num">03</div>
-      <div class="service-icon">🤖</div>
-      <h3>AI &amp; ML Systems</h3>
-      <p>LLM agents, RAG pipelines, computer vision, and deep learning models that go beyond prototypes. Trained, evaluated, deployed, and monitored — with real guardrails and audit trails.</p>
-      <div class="service-tags">
-        <span class="stag">LLMs / RAG</span>
-        <span class="stag">LangGraph</span>
-        <span class="stag">PyTorch</span>
-        <span class="stag">HuggingFace</span>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="s-num">04</div>
-      <div class="service-icon">⚙️</div>
-      <h3>Agentic Pipelines</h3>
-      <p>Multi-step autonomous systems that reason, retrieve, and act. From document processing pipelines to decision-making agents — built with auditable reasoning chains, not black boxes.</p>
-      <div class="service-tags">
-        <span class="stag">LangGraph</span>
-        <span class="stag">asyncio</span>
-        <span class="stag">Pydantic</span>
-        <span class="stag">Structured Output</span>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="s-num">05</div>
-      <div class="service-icon">👁️</div>
-      <h3>Computer Vision</h3>
-      <p>Image classification, object detection, OCR, and document intelligence. Six years of hands-on experience building and shipping vision models for real products.</p>
-      <div class="service-tags">
-        <span class="stag">PyTorch</span>
-        <span class="stag">Azure DI</span>
-        <span class="stag">OCR</span>
-        <span class="stag">GNNs</span>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="s-num">06</div>
-      <div class="service-icon">☁️</div>
-      <h3>Cloud &amp; Deployment</h3>
-      <p>Production-ready containerised deployments on GCP and Azure. Secure, scalable, observable — with Docker, Cloud Run, Secret Manager, and the full ops layer included.</p>
-      <div class="service-tags">
         <span class="stag">Docker</span>
-        <span class="stag">Cloud Run</span>
-        <span class="stag">Firestore</span>
-        <span class="stag">CI/CD</span>
+        <span class="stag">Kubernetes</span>
       </div>
     </div>
 
@@ -542,7 +551,7 @@ footer{
         <p>AI-powered study companion for medical college students. Chat with a clinical LLM tutor, or upload any PDF chapter and get a structured MCQ quiz with source-page explanations — all with safety guardrails to keep responses medically grounded.</p>
         <div class="proj-chips">
           <span class="chip">LangGraph</span>
-          <span class="chip">GPT-4o-mini</span>
+          <span class="chip">Reasoning Models</span>
           <span class="chip">FastAPI</span>
           <span class="chip">React Native</span>
           <span class="chip">Firestore</span>
@@ -667,11 +676,11 @@ footer{
         <p>Four-phase pipeline that checks whether pharmaceutical marketing assets faithfully reproduce their Important Safety Information. Produces section-level Coverage, Authenticity, and F1 scores — with word-level diffs showing exactly what's missing or wrong.</p>
         <div class="proj-chips">
           <span class="chip">Azure Doc Intelligence</span>
-          <span class="chip">OpenAI o3-mini</span>
+          <span class="chip">Reasoning Models</span>
           <span class="chip">Pydantic</span>
           <span class="chip">asyncio</span>
-          <span class="chip">rapidfuzz</span>
-          <span class="chip">openpyxl</span>
+          <span class="chip">Fuzzy matching</span>
+          <span class="chip">Excel reports</span>
         </div>
         <a href="mailto:mugeshk1171@gmail.com" class="proj-link">Discuss a similar project ↗</a>
       </div>
@@ -733,13 +742,6 @@ footer{
         <div class="c-card-l">
           <span class="c-k">LinkedIn</span>
           <span class="c-v">linkedin.com/in/mugeshk97</span>
-        </div>
-        <span class="c-arr">↗</span>
-      </a>
-      <a class="c-card" href="https://github.com/mugeshk97" target="_blank">
-        <div class="c-card-l">
-          <span class="c-k">GitHub</span>
-          <span class="c-v">github.com/mugeshk97</span>
         </div>
         <span class="c-arr">↗</span>
       </a>
